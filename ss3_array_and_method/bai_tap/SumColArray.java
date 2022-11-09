@@ -26,7 +26,7 @@ public class SumColArray {
         do {
             System.out.println("Enter column index: ");
             indexCol = Integer.parseInt(sc.nextLine());
-        }while (indexCol < 0 || indexCol > col);
+        }while (indexCol < 0 || indexCol > col -1 );
 
         for (double[] matrix : arrayMatrix) {
             sum += matrix[indexCol];
