@@ -8,12 +8,11 @@ public class Display20FirstPrime {
 
         System.out.println("Nhập số lượng số nguyên cần in ra: ");
         int number = Integer.parseInt(sc.nextLine());
-
-        boolean flag = true;
         int count = 0;
         int N = 2;
 
         while (count < number) {
+            boolean flag = true;
             for (int i = 2; i <= Math.sqrt(N); i++) {
                 if (N % i == 0) {
                     flag = false;
@@ -24,7 +23,6 @@ public class Display20FirstPrime {
                 count++;
                 System.out.print(N + ", ");
             }
-            flag = true;
             N++;
         }
     }
