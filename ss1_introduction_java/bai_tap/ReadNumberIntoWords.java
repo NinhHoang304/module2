@@ -1,6 +1,6 @@
 package ss1_introduction_java.bai_tap;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class ReadNumberIntoWords {
     public static void main(String[] args) {
@@ -8,6 +8,8 @@ public class ReadNumberIntoWords {
 
         System.out.println("Enter random number: ");
         int number = Integer.parseInt(scanner.nextLine());
+        int tens, ones;
+        String strHundreds = "", strTens = "", strOnes = "";
 
         if (number < 10 && number > 0) {
             switch (number) {
@@ -73,8 +75,163 @@ public class ReadNumberIntoWords {
                     System.out.println("nineteen");
                     break;
             }
-        }else {
-            System.out.println("Out of ability");
+        }else if (number < 100) {
+            tens = number / 10;
+            ones = number % 10;
+            switch (tens) {
+                case 2:
+                    strTens = "twenty";
+                    break;
+                case 3:
+                    strTens = "thirty";
+                    break;
+                case 4:
+                    strTens = "forty";
+                    break;
+                case 5:
+                    strTens = "fifty";
+                    break;
+                case 6:
+                    strTens = "sixty";
+                    break;
+                case 7:
+                    strTens = "seventy";
+                    break;
+                case 8:
+                    strTens = "eighty";
+                    break;
+                case 9:
+                    strTens = "ninety";
+                    break;
+            }
+            switch (ones) {
+                case 1:
+                    strOnes = " one";
+                    break;
+                case 2:
+                    strOnes = " two";
+                    break;
+                case 3:
+                    strOnes = " three";
+                    break;
+                case 4:
+                    strOnes = " four";
+                    break;
+                case 5:
+                    strOnes = " five";
+                    break;
+                case 6:
+                    strOnes = " six";
+                    break;
+                case 7:
+                    strOnes = " seven";
+                    break;
+                case 8:
+                    strOnes = " eight";
+                    break;
+                case 9:
+                    strOnes = " nine";
+                    break;
+            }
+            System.out.printf(strTens + strOnes);
+        } else if (number < 1000) {
+            int hundreds;
+            hundreds = number / 100;
+            tens = (number - (hundreds * 100)) / 10;
+            ones = (number - (hundreds * 100)) % 10;
+            switch (hundreds) {
+                case 1:
+                    strHundreds = "One";
+                    break;
+                case 2:
+                    strHundreds = "two";
+                    break;
+                case 3:
+                    strHundreds = "three";
+                    break;
+                case 4:
+                    strHundreds = "four";
+                    break;
+                case 5:
+                    strHundreds = "five";
+                    break;
+                case 6:
+                    strHundreds = "six";
+                    break;
+                case 7:
+                    strHundreds = "seven";
+                    break;
+                case 8:
+                    strHundreds = "eight";
+                    break;
+                case 9:
+                    strHundreds = "nine";
+                    break;
+            }
+            switch (ones) {
+                case 1:
+                    strOnes = " one ";
+                    break;
+                case 2:
+                    strOnes = " two";
+                    break;
+                case 3:
+                    strOnes = " three";
+                    break;
+                case 4:
+                    strOnes = " four";
+                    break;
+                case 5:
+                    strOnes = " five";
+                    break;
+                case 6:
+                    strOnes = " six";
+                    break;
+                case 7:
+                    strOnes = " seven";
+                    break;
+                case 8:
+                    strOnes = " eight";
+                    break;
+                case 9:
+                    strOnes = " nine";
+                    break;
+            }
+
+            switch (tens) {
+                case 0:
+                    strTens = "";
+                    break;
+                case 1:
+                    strTens = "ten";
+                    break;
+                case 2:
+                    strTens = "twenty";
+                    break;
+                case 3:
+                    strTens = "thirty";
+                    break;
+                case 4:
+                    strTens = "forty";
+                    break;
+                case 5:
+                    strTens = "fifty";
+                    break;
+                case 6:
+                    strTens = "sixty";
+                    break;
+                case 7:
+                    strTens = "seventy";
+                    break;
+                case 8:
+                    strTens = "eighty";
+                    break;
+                case 9:
+                    strTens = "ninety";
+                    break;
+            }
+
+            System.out.println(strHundreds + " hundreds " + strTens + strOnes );
         }
     }
 }
