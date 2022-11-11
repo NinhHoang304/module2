@@ -6,6 +6,7 @@ public class TestStudent {
         System.out.println(student);
         student.setName("Nguyen van A");
         student.setClasses("C09");
-        System.out.println(student);
+        Student.change();
+        System.out.println(student.toString());
     }
 }
