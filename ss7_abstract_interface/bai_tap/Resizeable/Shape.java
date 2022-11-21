@@ -4,10 +4,10 @@ public abstract class Shape {
     private String color;
     private String filled;
 
-    public Shape() {
+    protected Shape() {
     }
 
-    public Shape(String color, String filled) {
+    protected Shape(String color, String filled) {
         this.color = color;
         this.filled = filled;
     }
