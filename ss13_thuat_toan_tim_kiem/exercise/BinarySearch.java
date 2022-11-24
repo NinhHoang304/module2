@@ -1,4 +1,4 @@
-package ss12_java_collection.exercise;
+package ss13_thuat_toan_tim_kiem.exercise;
 
 import java.util.Arrays;
 import java.util.Scanner;
