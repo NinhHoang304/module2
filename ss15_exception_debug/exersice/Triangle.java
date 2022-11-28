@@ -21,7 +21,7 @@ public class Triangle {
                 System.out.println("3 cạnh tam giác là " + side1 + " " + side2 + " " + side3);
                 break;
             } catch (IllegalTriangleException e) {
-                System.err.println(e.getError());
+                System.err.println(e.getMessage());
             } catch (Exception e) {
                 System.err.println("Nhập sai kiểu dữ liệu");
             }
