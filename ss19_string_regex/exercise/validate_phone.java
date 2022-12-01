@@ -8,7 +8,7 @@ public class validate_phone {
 
         Scanner sc = new Scanner(System.in);
 
-        String REGEX_PHONE_NUMBER = "^\\([0-9]{2}\\)-0[0-9]{9}$";
+        String REGEX_PHONE_NUMBER = "^\\([0-9]{2}\\)-\\(0[0-9]{9}\\)$";
         Pattern p = Pattern.compile(REGEX_PHONE_NUMBER);
         while (true){
             System.out.println("Enter phone number: ");
